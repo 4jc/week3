@@ -130,12 +130,19 @@ System.out.println(robotSays(9,true));	//#13
 			return false;
 		}
 	}
-	public static String robotSays(int groundGrade, boolean nothingBlocks) {	//#13
-		if(groundGrade < 5 && nothingBlocks) {	//A robot will say whether the ground is safe 
-			return "Go!";						//for traveling.
-		}else {									//It will decide based on how steep a hill is
-			return "Stop!";						//and if anything blocks the path.
+	public static int countLetters() {	//#13
+		String[] count = new String[5];
+		count[0] = "yel low";
+		count[1] = "owl";
+		count[2] = " s p a c e ";
+		count[3] = "Ned Garret";
+		count[4] = "beanie+";
+		
+		int counting = 0;	//This counts the letters in the array.
+		for (int i = 0; i < 5; i++) {
+			 counting += count[i].replace(" ", "").replace("+", "").length();
 		}
+		return counting;
 	}
 	
 }	
